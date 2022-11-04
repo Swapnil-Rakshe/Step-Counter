@@ -25,7 +25,7 @@ For each stage a separate function is defined. As stated in the reference file t
 
 ![](https://github.com/Swapnil-Rakshe/Swapnil-Rakshe/blob/main/Signal%20at%20each%20processing%20stage.png)
 
-*Fig : Signal at each processing stage. The ground truth shows the moment when a step was detected by device.*
+**Fig : Signal at each processing stage. The ground truth shows the moment when a step was detected by device.**
 
     
 The notebook `oxfordstepcounter.ipynb` is present in the folder `step-counter`. It contains all the description about how to execute this python file.
@@ -34,6 +34,15 @@ To run this notebook in jupyter notebook, simply open the file and click on the 
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a> ) present at the top in the notebook.
 
-**Sample Results**:
+##Sample Results:
+
+**Wearing `FlexiTail` tight (Acceleration in x-dirextion is >-3000 m/s^2)**
+
+
+
+
+
+**Wearing `FlexiTail` loose (Acceleration in x-dirextion is >-3000 m/s^2)**
+
 
 

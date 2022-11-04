@@ -37,7 +37,7 @@ For each stage a separate function is defined. As stated in the reference file t
 
 
 
-**Wearing `FlexiTail` loose (Acceleration in x-dirextion is >-3000 m/s^2)**
+**Wearing `FlexiTail` loose (Acceleration in x-dirextion is <-3000 m/s^2)**
 
 ![](https://github.com/Swapnil-Rakshe/Swapnil-Rakshe/blob/main/Wearing%20flexitail%20loose.png)
 

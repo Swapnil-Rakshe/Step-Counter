@@ -4,9 +4,10 @@
 Develop an algorithm that counts the walking steps using `FlexiTail` data. This algorith is based on 'https://oxford-step-counter.github.io/'
 
 ## Content
-* `optimisation` contains data used to optimize the parameters of the algorithm
-* `step-counter` contains python file used to validate the algorithm
 * `Literature review` contain research paper used as a refrence to optimize the parameters of the algorithm
+* `step-counter` contains python file used to validate the algorithm
+* `optimisation` contains data used to optimize the parameters of the algorithm
+
 
   
 ## Getting started

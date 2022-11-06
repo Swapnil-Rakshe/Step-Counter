@@ -1,20 +1,20 @@
-# Step Counting Algorithm
+# Step Counting Model
 
 ## Objective
-Develop an algorithm that counts the walking steps using `FlexiTail` data. This algorith is based on 'https://oxford-step-counter.github.io/'
+Develop a model that counts walking steps using FlexiTail data. This model is based on 'https://oxford-step-counter.github.io/'
 
 ## Content
-* `Literature review` contain research paper used as a refrence to optimize the parameters of the algorithm
-* `step-counter` contains python file used to validate the algorithm
-* `optimisation` contains data used to optimize the parameters of the algorithm
+* `literature review` contains a research paper used as a reference to optimize model parameters.
+* `step-counter` contains a python file used to validate a model.
+* `optimisation` contains data used to optimize the parameters of a model.
 
 
   
 ## Getting started
     
-The python algorithm is derived from oxford java step counter algorithm. Please read the references available in github repository 'https://github.com/Oxford-step-counter/Java-Step-Counter'
+A statistical model is derived from the Oxford Java step counter algorithm. Please read the references available in the GitHub repository 'https://github.com/Oxford-step-counter/Java-Step-Counter'
 
-Step detection algorithm consist of five steps:
+Step detection model consists of five steps:
 
 * Pre-processing stage
 * Filtering stage
@@ -22,7 +22,7 @@ Step detection algorithm consist of five steps:
 * Detection stage
 * Post-processing stage
     
-For each stage a separate function is defined. As stated in the reference file the optimal set of parameters are used for the step detection.
+For each stage, a separate function is defined. As stated in the reference file the optimal set of parameters is used for step detection.
 
 ![image](https://github.com/Swapnil-Rakshe/Swapnil-Rakshe/blob/main/Signal%20at%20each%20processing%20stage.png)
 

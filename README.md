@@ -1,7 +1,7 @@
 # Step Counting Model
 
 ## Objective
-Develop a model that counts walking steps using FlexiTail data. This model is based on 'https://oxford-step-counter.github.io/'
+Develop a model that counts walking steps using `FlexiTail` data. This model is based on 'https://oxford-step-counter.github.io/'
 
 ## Content
 * `literature review` contains a research paper used as a reference to optimize model parameters.

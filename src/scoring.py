@@ -5,11 +5,10 @@ from datetime import datetime
 from utils import DataPoint
 
 class scoring:
-    def __init__(self, smoothData, windowSize = 35):
-        self.smoothData = smoothData
-        self.windowSize = windowSize
+    def __init__(self):
+        pass
     
-    def ScoringStage(self):
+    def ScoringStage(self, smoothData, windowSize = 35):
     
         '''
     Third stage of step counting
@@ -32,8 +31,8 @@ class scoring:
 
         '''
     
-        midPoint = int(self.windowSize/2) #Mid point of window
-        inputQueue = self.smoothData[:] # shallow copy
+        midPoint = int(windowSize/2) #Mid point of window
+        inputQueue = smoothData[:] # shallow copy
         peakScoreData = [] 
         window = [] #list containing magnitude values
         active = True
@@ -43,17 +42,17 @@ class scoring:
             if(len(inputQueue) == 0):
                 active = False
             
-            if(len(window) == self.windowSize):
+            if(len(window) == windowSize):
                 diffLeft = 0
                 diffRight = 0
                 # calculate diffleft and diffright based on the algorithm
                 for i in range(midPoint):
                     diffLeft += window[midPoint].getMagnitude() - window[i].getMagnitude();
-                for J in range(midPoint, self.windowSize):
+                for J in range(midPoint, windowSize):
                     diffRight += window[midPoint].getMagnitude() - window[J].getMagnitude();
         
                 # Calculate the score and append to the output list
-                score = (diffRight + diffLeft) / (self.windowSize - 1)
+                score = (diffRight + diffLeft) / (windowSize - 1)
                 dp = DataPoint(score, window[midPoint].getTime())
                 peakScoreData.append(dp)
                 #Pop out the oldest point from the window

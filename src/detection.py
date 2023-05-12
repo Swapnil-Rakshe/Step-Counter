@@ -1,14 +1,10 @@
-import pandas as pd
-import numpy as np
-import math
-from datetime import datetime
+from utils import DataPoint
 
 class detection:
-    def __init__(self, peakScoreData, threshold = 1.2):
-        self.peakScoreData = peakScoreData
-        self.threshold = threshold
+    def __init__(self):
+        pass
     
-    def DetectionStage(self):
+    def DetectionStage(self, peakScoreData, threshold = 1.2):
     
         '''
     Fourth stage of step counting
@@ -33,7 +29,7 @@ class detection:
 
         '''
     
-        inputQueue = self.peakScoreData[:] # Shallow copy
+        inputQueue = peakScoreData[:] # Shallow copy
         outputQueue = []
         # initial parameters
         active = True
@@ -64,7 +60,7 @@ class detection:
         
             # Once we have enough data points to have a reasonable mean/standard deviation, start detecting
             if(count >= 1): #Min data points to be counted is 1 data point
-                if ((dp.getMagnitude() - acc_mean) > acc_std * self.threshold):
+                if ((dp.getMagnitude() - acc_mean) > acc_std * threshold):
                     # This is peak
                     outputQueue.append(dp)
     

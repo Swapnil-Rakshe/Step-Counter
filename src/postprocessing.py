@@ -1,16 +1,11 @@
-import pandas as pd
-import numpy as np
-import math
-from datetime import datetime
+from utils import DataPoint
 
 class postprocessing:
-    def __init__(self, peakData, timeThreshold = 200):
-        self.peakData = peakData
-        self.timeThreshold = timeThreshold
-
+    def __init__(self):
+        pass
     
 
-    def PostProcessStage(self):
+    def PostProcessStage(self, peakData, timeThreshold = 200):
         '''
     Fifth Stage of Step Counting
     ----------------------------
@@ -36,9 +31,9 @@ class postprocessing:
     
     
         steps = 0 # number of steps detected
-        inputQueue = self.peakData[:]
+        inputQueue = peakData[:]
         outputQueue = []
-        current = self.peakData[0]
+        current = peakData[0]
         active = True
         while(active):
             dp = inputQueue.pop(0)
@@ -48,7 +43,7 @@ class postprocessing:
                 # End of stage
                 # continue
         
-            if ((dp.getTime() - current.getTime()) > self.timeThreshold):
+            if ((dp.getTime() - current.getTime()) > timeThreshold):
                 # If the time difference exceeds the threshold, we have a confirmed step
                 current = dp
                 steps += 1

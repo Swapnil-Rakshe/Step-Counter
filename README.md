@@ -18,17 +18,11 @@ A statistical model is derived from the Oxford Java step counter algorithm.
 
 Step detection model consists of five steps:
 
-# Pre-processing stage : 
-This stage is responsible for computing the magnitude of the triaxial accelerometry signal and ensuring a constant sampling frequency by means of linear interpolation. 
-# Filtering stage: 
-Accelerometers are subject to noise from a variety of sources (mechanical, electrical, thermal,etc.), therefore some noise-reduction technique is needed especially at frequencies that are not related to human walking or running. In order to reduce the noise level, we have implemented a finite impulse response (FIR) low-pass filter with a cut-off frequency of 3 Hz, which allows a variety of walking speeds. This value should include even the pace of the speediest walkers, which was identified as 5.4 mph (8.7 km/h) by the American College of Sports Medicine, with a ratio of 2000 steps per mile (1250 steps per km). An
-example of the raw accelerometer signal after interpolation and filtering is shown in figure.
-# Scoring stage:
-The function of the scoring stage is to evaluate the peakiness of a given sample. The result of this stage should increase the magnitude of any peaks, making them more evident for the subsequent peak detection.
-# Detection stage: 
-This stage identifies potential candidate peaks to be associated with a step by statistically detecting outliers. 
-# Post-processing stage: 
-This stage slides a window of a fixed size, across the potential peaks and only keeps the maximum sample within the window. As the small dots in figure show, all of the potential peak points are clustered around the rise to the main peak. This stage selects the local maximum among them.
+* **Pre-processing stage:** This stage is responsible for computing the magnitude of the triaxial accelerometry signal and ensuring a constant sampling frequency by means of linear interpolation. 
+* **Filtering stage:** Accelerometers are subject to noise from a variety of sources (mechanical, electrical, thermal,etc.), therefore some noise-reduction technique is needed especially at frequencies that are not related to human walking or running. In order to reduce the noise level, we have implemented a finite impulse response (FIR) low-pass filter with a cut-off frequency of 3 Hz, which allows a variety of walking speeds. This value should include even the pace of the speediest walkers, which was identified as 5.4 mph (8.7 km/h) by the American College of Sports Medicine, with a ratio of 2000 steps per mile (1250 steps per km). An example of the raw accelerometer signal after interpolation and filtering is shown in figure.
+* **Scoring stage:** The function of the scoring stage is to evaluate the peakiness of a given sample. The result of this stage should increase the magnitude of any peaks, making them more evident for the subsequent peak detection.
+* **Detection stage:** This stage identifies potential candidate peaks to be associated with a step by statistically detecting outliers. 
+* **Post-processing stage:** This stage slides a window of a fixed size, across the potential peaks and only keeps the maximum sample within the window. As the small dots in figure show, all of the potential peak points are clustered around the rise to the main peak. This stage selects the local maximum among them.
     
 For more details you can visit the following GitHub repository 'https://github.com/Oxford-step-counter/Java-Step-Counter'
 

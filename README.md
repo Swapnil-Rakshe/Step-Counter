@@ -10,7 +10,7 @@ The objective of this project was to create a model capable of accurately counti
 * `src` contains source code.
 
 ## Methodology and Dataset
-The step counter algorithm used in this project is based on the Windowed Peak Detection method. The dataset utilized in the study comprises measurements obtained from 18 left-side sensors and 18 right-side sensors, including readings from 3 accelerometers and 3 gyrometers in 3 directions. Additionally, the dataset includes a timestamp value and a constant. 
+The step counter algorithm used in this project is based on the Windowed Peak Detection method. The dataset utilized in the study comprises measurements obtained from 18 left-side sensors and 18 right-side sensors, including readings from an accelerometer and gyrometers in 3 directions. Additionally, the dataset includes a timestamp value and a constant. 
   
 ## Getting started
     
